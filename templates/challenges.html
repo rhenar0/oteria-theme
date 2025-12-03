@@ -104,25 +104,29 @@
            getDifficultyFromName(challengeName) {
              if (!challengeName) return 'medium';
              const name = challengeName.toUpperCase();
-             if (name.startsWith('[EASY]')) return 'easy';
-             if (name.startsWith('[MEDIUM]')) return 'medium';
+             if (name.startsWith('[TFACILE]')) return 'tresfacile';
+             if (name.startsWith('[FACILE]')) return 'facile';
+             if (name.startsWith('[MOYEN]')) return 'moyen';
              if (name.startsWith('[HARD]')) return 'hard';
-             return 'medium'; // 默认中等难度
+             if (name.startsWith('[COMP]')) return 'complique';
+             return 'facile'; // 默认中等难度
            },
            
            getCleanChallengeName(challengeName) {
              if (!challengeName) return '';
              // 移除前缀标签 [EASY], [MEDIUM], [HARD]
-             return challengeName.replace(/^\[(EASY|MEDIUM|HARD)\]\s*/i, '').trim();
+             return challengeName.replace(/^\[(TFACILE|FACILE|MOYEN|HARD|COMP)\]\s*/i, '').trim();
            },
            
            getDifficultyWeight(challengeName) {
              if (!challengeName) return 2; // 默认中等难度权重
              const name = challengeName.toUpperCase();
-             if (name.startsWith('[EASY]')) return 1;    // EASY = 1 (最高优先级)
-             if (name.startsWith('[MEDIUM]')) return 2;  // MEDIUM = 2
-             if (name.startsWith('[HARD]')) return 3;     // HARD = 3 (最低优先级)
-             return 2; // 默认中等难度权重
+             if (name.startsWith('[TFACILE]')) return 1;    // EASY = 1 (最高优先级
+             if (name.startsWith('[FACILE]')) return 2;
+             if (name.startsWith('[MOYEN]')) return 3;)
+             if (name.startsWith('[HARD]')) return 4;  // MEDIUM = 2
+             if (name.startsWith('[COMP]')) return 5;     // HARD = 3 (最低优先级)
+             return 1; // 默认中等难度权重
            },
            
            getSortedChallenges(category) {
@@ -321,7 +325,7 @@
                             type="button"
                           >
                             <template x-if="!c.solved_by_me">
-                              <span><i class="fas fa-play me-1"></i>{% trans %}Commencé{% endtrans %}</span>
+                              <span><i class="fas fa-play me-1"></i>{% trans %}Commencer{% endtrans %}</span>
                             </template>
                             <template x-if="c.solved_by_me">
                               <span><i class="fas fa-check me-1"></i>{% trans %}Résolus{% endtrans %}</span>
@@ -408,7 +412,7 @@
                   type="button"
                 >
                   <i class="fas fa-activity me-1"></i>
-                  {% trans %}Activité{% endtrans %}
+                  {% trans %}Activités{% endtrans %}
                 </button>
               </nav>
             </div>
