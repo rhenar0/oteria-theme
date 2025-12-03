@@ -226,7 +226,7 @@
                       <h4 class="mb-1 fw-bold" x-text="category"></h4>
                       <small class="text-muted">
                         <span x-text="getSortedChallenges(category).length"></span> {% trans %}challenges{% endtrans %}
-                        · <span x-text="getSortedChallenges(category).filter(c => c.solved_by_me).length"></span> {% trans %}résolus{% endtrans %}
+                        · <span x-text="getSortedChallenges(category).filter(c => c.solved_by_me).length"></span> {% trans %}résolu{% endtrans %}
                       </small>
                     </div>
                   </div>
@@ -264,7 +264,7 @@
                             </span>
                             <span class="badge bg-light text-muted px-2 py-1 rounded-pill small">
                               <i class="fas fa-users me-1"></i>
-                              <span x-text="c.solves || 0"></span> {% trans %}résolus{% endtrans %}
+                              <span x-text="c.solves || 0"></span> {% trans %}résolu{% endtrans %}
                             </span>
                           </div>
 
@@ -464,7 +464,7 @@
                       <div class="activity-content flex-grow-1">
                         <div class="activity-user small fw-semibold" x-text="solve.user"></div>
                         <div class="activity-challenge small text-muted">
-                          {% trans %}résolus{% endtrans %} <span x-text="solve.challenge"></span>
+                          {% trans %}résolu{% endtrans %} <span x-text="solve.challenge"></span>
                         </div>
                         <div class="activity-time small text-muted" x-text="formatTime(solve.date)"></div>
                       </div>
