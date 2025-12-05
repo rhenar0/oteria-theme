@@ -16,8 +16,8 @@
                   <h3 class="text-white mb-2">{{ Configs.ctf_name }}</h3>
                 {% endif %}
               </div>
-              <h2 class="text-white fw-bold mb-1">{% trans %}Welcome Back{% endtrans %}</h2>
-              <p class="text-white-50 mb-0">{% trans %}Sign in to continue your CTF journey{% endtrans %}</p>
+              <h2 class="text-white fw-bold mb-1">{% trans %}De retour ?{% endtrans %}</h2>
+              <p class="text-white-50 mb-0">{% trans %}Identifiez vous pour continuer le Challenge IDF !{% endtrans %}</p>
             </div>
 
             <!-- Card Body -->
@@ -44,7 +44,7 @@
                       {{ form.name.label.text }}
                     </label>
                     <div class="position-relative">
-                      {{ form.name(class="form-control form-control-lg rounded-pill ps-4", value=name, autocomplete="username email", placeholder="Enter your username or email") }}
+                      {{ form.name(class="form-control form-control-lg rounded-pill ps-4", value=name, autocomplete="username email", placeholder="Entrez votre pseudo ou votre mail") }}
                     </div>
                   </div>
 
@@ -55,7 +55,7 @@
                       {{ form.password.label.text }}
                     </label>
                     <div class="position-relative">
-                      {{ form.password(class="form-control form-control-lg rounded-pill ps-4", value=password, autocomplete="current-password", placeholder="Enter your password") }}
+                      {{ form.password(class="form-control form-control-lg rounded-pill ps-4", value=password, autocomplete="current-password", placeholder="Votre magnifique mot de passe") }}
                     </div>
                   </div>
 
@@ -64,17 +64,17 @@
                     <div class="form-check">
                       <input class="form-check-input custom-checkbox" type="checkbox" id="rememberMe">
                       <label class="form-check-label" for="rememberMe">
-                        {% trans %}Remember me{% endtrans %}
+                        {% trans %}Se souvenir{% endtrans %}
                       </label>
                     </div>
                     <a href="{{ url_for('auth.reset_password') }}" class="text-decoration-none">
-                      {% trans %}Forgot password?{% endtrans %}
+                      {% trans %}Mot de passe oublié ?{% endtrans %}
                     </a>
                   </div>
 
                   <!-- Login Button -->
                   <div class="mb-4">
-                    {{ form.submit(class="btn btn-primary btn-lg w-100 rounded-pill fw-semibold py-3", value="Sign In") }}
+                    {{ form.submit(class="btn btn-primary btn-lg w-100 rounded-pill fw-semibold py-3", value="S'identifier !") }}
                   </div>
 
                   {{ form.nonce() }}
@@ -85,9 +85,9 @@
               {% if registration_visible() %}
                 <div class="text-center">
                   <p class="text-muted mb-0">
-                    {% trans %}Don't have an account?{% endtrans %}
+                    {% trans %}Vous n'avez pas de compte ?{% endtrans %}
                     <a href="{{ url_for('auth.register') }}" class="text-decoration-none fw-semibold">
-                      {% trans %}Create one here{% endtrans %}
+                      {% trans %}C'est ici !{% endtrans %}
                     </a>
                   </p>
                 </div>
@@ -141,7 +141,7 @@
     }
 
     .login-header {
-      background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%) !important;
+      background: linear-gradient(135deg, #FF2C65 0%, #5856D6 100%) !important;
       color: white !important;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     }
@@ -160,8 +160,8 @@
     }
 
     .custom-checkbox:checked {
-      background: #007AFF !important;
-      border-color: #007AFF !important;
+      background: #FF2C65 !important;
+      border-color: #FF2C65 !important;
       box-shadow: none !important;
     }
 
@@ -182,7 +182,7 @@
     }
 
     .custom-checkbox:hover {
-      border-color: #007AFF !important;
+      border-color: #FF2C65 !important;
     }
 
     .form-check {
@@ -200,7 +200,7 @@
     }
 
     .form-check-label:hover {
-      color: #007AFF !important;
+      color: #FF2C65 !important;
     }
 
     .form-control-lg {
@@ -261,12 +261,12 @@
     }
 
     [data-bs-theme="dark"] .custom-checkbox:checked {
-      background: #007AFF !important;
-      border-color: #007AFF !important;
+      background: #FF2C65 !important;
+      border-color: #FF2C65 !important;
     }
 
     [data-bs-theme="dark"] .custom-checkbox:hover {
-      border-color: #007AFF !important;
+      border-color: #FF2C65 !important;
     }
 
     [data-bs-theme="dark"] .form-check-label {
@@ -274,7 +274,7 @@
     }
 
     [data-bs-theme="dark"] .form-check-label:hover {
-      color: #007AFF !important;
+      color: #FF2C65 !important;
     }
 
     /* Responsive adjustments */

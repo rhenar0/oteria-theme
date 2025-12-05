@@ -16,8 +16,8 @@
                   <h3 class="text-white mb-2">{{ Configs.ctf_name }}</h3>
                 {% endif %}
               </div>
-              <h2 class="text-white fw-bold mb-1">{% trans %}Join WMCTF{% endtrans %}</h2>
-              <p class="text-white-50 mb-0">{% trans %}Create your account and start competing{% endtrans %}</p>
+              <h2 class="text-white fw-bold mb-1">{% trans %}Rejoindre C-IDF{% endtrans %}</h2>
+              <p class="text-white-50 mb-0">{% trans %}Faites votre compte et rejoignez le Challenge IDF{% endtrans %}</p>
             </div>
 
             <!-- Card Body -->
@@ -46,7 +46,7 @@
                       {{ form.name.label.text }}
                     </label>
                     <div class="position-relative">
-                      {{ form.name(class="form-control form-control-lg rounded-pill ps-4", value=name, autocomplete="username", placeholder="Choose your username") }}
+                      {{ form.name(class="form-control form-control-lg rounded-pill ps-4", value=name, autocomplete="username", placeholder="Choisissez votre pseudo") }}
                     </div>
                     <small class="form-text text-muted">
                       {% trans %}Your username on the site{% endtrans %}
@@ -60,7 +60,7 @@
                       {{ form.email.label.text }}
                     </label>
                     <div class="position-relative">
-                      {{ form.email(class="form-control form-control-lg rounded-pill ps-4", value=email, autocomplete="email", placeholder="Enter your email address") }}
+                      {{ form.email(class="form-control form-control-lg rounded-pill ps-4", value=email, autocomplete="email", placeholder="Votre email") }}
                     </div>
                     <small class="form-text text-muted">
                       {% trans %}Never shown to the public{% endtrans %}
@@ -74,7 +74,7 @@
                       {{ form.password.label.text }}
                     </label>
                     <div class="position-relative">
-                      {{ form.password(class="form-control form-control-lg rounded-pill ps-4", value=password, autocomplete="new-password", placeholder="Create a secure password") }}
+                      {{ form.password(class="form-control form-control-lg rounded-pill ps-4", value=password, autocomplete="new-password", placeholder="Un magnifique mot de passe") }}
                     </div>
                     <small class="form-text text-muted">
                       {% trans %}Password used to log into your account{% endtrans %}
@@ -86,7 +86,7 @@
 
                   <!-- Register Button -->
                   <div class="mb-4">
-                    {{ form.submit(class="btn btn-primary btn-lg w-100 rounded-pill fw-semibold py-3", value="Create Account") }}
+                    {{ form.submit(class="btn btn-primary btn-lg w-100 rounded-pill fw-semibold py-3", value="Créer mon compte !") }}
                   </div>
 
                   {% if Configs.tos_or_privacy %}
@@ -106,9 +106,9 @@
               <!-- Login Link -->
               <div class="text-center">
                 <p class="text-muted mb-0">
-                  {% trans %}Already have an account?{% endtrans %}
+                  {% trans %}Vous avez déjà un compte ?{% endtrans %}
                   <a href="{{ url_for('auth.login') }}" class="text-decoration-none fw-semibold">
-                    {% trans %}Sign in here{% endtrans %}
+                    {% trans %}C'est ici !{% endtrans %}
                   </a>
                 </p>
               </div>
@@ -159,7 +159,7 @@
     }
 
     .register-header {
-      background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%) !important;
+      background: linear-gradient(135deg, #FF2C65 0%, #5856D6 100%) !important;
       color: white !important;
       text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
     }
